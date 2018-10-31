@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.RoleMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.domin.Role">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="last_modify_by" property="lastModifyBy" jdbcType="VARCHAR"/>
+        <result column="last_modify_time" property="lastModifyTime" jdbcType="TIMESTAMP"/>
+        <result column="deleted" property="deleted" jdbcType="INTEGER"/>
+        <result column="version" property="version" jdbcType="BIGINT"/>
+
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="role_desc" property="roleDesc" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,create_by, create_time, last_modify_by, last_modify_time, deleted, version, name, type,role_desc
+    </sql>
+    <sql id="Search_Where_Clause">
+        <where>
+            deleted = 0
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                AND name = #{name}
+            </if>
+            <if test="type != null and type != ''">
+                AND type = #{type}
+            </if>
+        </where>
+    </sql>
+    <sql id="Search_NoWhere_Clause">
+              deleted = 0
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                AND name = #{name}
+            </if>
+            <if test="type != null and type != ''">
+                AND type = #{type}
+            </if>
+    </sql>
+    <insert id="insertUserRole">
+          INSERT INTO u_user_role (uid,rid) VALUES
+            <foreach collection="rIds" item="rId" index="index" separator=",">
+                (#{uId,jdbcType=BIGINT},#{rId,jdbcType=BIGINT})
+            </foreach>
+    </insert>
+    <delete id="deletedUserRole">
+          DELETE FROM u_user_role where
+          uid = #{uId,jdbcType=BIGINT} and rId IN
+          <foreach collection="rIds" item="rId" index="index" open="(" close=")" separator=",">
+              #{rId}
+          </foreach>
+    </delete>
+    <select id="selectRolePageByDomin" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM u_role
+        <include refid="Search_Where_Clause"/>
+    </select>
+    <select id="selectUserRolePageByDomin" resultMap="BaseResultMap" parameterType="com.example.demo.model.RoleQueryModel">
+        SELECT <include refid="Base_Column_List"/>
+        FROM u_role u
+        WHERE EXISTS (
+        SELECT rid FROM u_user_role WHERE u.id = rid
+        AND <include refid="Search_NoWhere_Clause"/>
+        AND uid = #{uId}
+        )
+    </select>
+    <select id="selectUnboundUserRolePageByDomin" resultMap="BaseResultMap" parameterType="com.example.demo.model.RoleQueryModel">
+        SELECT <include refid="Base_Column_List"/>
+        FROM u_role u
+        WHERE <include refid="Search_NoWhere_Clause"/> AND
+        not EXISTS (
+        SELECT rid FROM u_user_role WHERE u.id = rid
+        AND uid = #{uId}
+        )
+    </select>
+</mapper>

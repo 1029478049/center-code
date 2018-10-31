@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CustomerMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.domin.Customer">
+        <id column="ID" jdbcType="BIGINT" property="id" />
+        <result column="CUST_NAME" jdbcType="VARCHAR" property="custName" />
+        <result column="CUST_TYPE" jdbcType="BIGINT" property="custType" />
+        <result column="CUST_BELONG" jdbcType="BIGINT" property="custBelong" />
+        <result column="CUST_ADDR" jdbcType="VARCHAR" property="custAddr" />
+        <result column="CUST_WEBSITE" jdbcType="VARCHAR" property="custWebsite" />
+        <result column="CREATED" jdbcType="TIMESTAMP" property="created" />
+        <result column="UPDATED" jdbcType="TIMESTAMP" property="updated" />
+        <result column="SALE_MGR" jdbcType="BIGINT" property="saleMge" />
+        <result column="OPER" jdbcType="BIGINT" property="oper" />
+        <result column="STATE" jdbcType="BIGINT" property="state" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        ID,CUST_NAME,CUST_TYPE,CUST_BELONG,CUST_ADDR,CUST_WEBSITE,CREATED,UPDATED,SALE_MGR,OPER,STATE
+    </sql>
+    <select id="selsectAll" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM customer
+    </select>
+
+</mapper>

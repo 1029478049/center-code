@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.SupStudentMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.domin.SupStudent">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="last_modify_by" property="lastModifyBy" jdbcType="VARCHAR"/>
+        <result column="last_modify_time" property="lastModifyTime" jdbcType="TIMESTAMP"/>
+        <result column="deleted" property="deleted" jdbcType="INTEGER"/>
+        <result column="version" property="version" jdbcType="BIGINT"/>
+
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="eng_name" property="engName" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="BIGINT"/>
+        <result column="age" property="age" jdbcType="BIGINT"/>
+        <result column="primary_school" property="primarySchool" jdbcType="VARCHAR"/>
+        <result column="middle_school" property="middleSchool" jdbcType="VARCHAR"/>
+        <result column="high_school" property="highSchool" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="father_phone" property="fatherPhone" jdbcType="VARCHAR"/>
+        <result column="mather_phone" property="matherPhone" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="is_formal" property="isFormal" jdbcType="BIGINT"/>
+        <result column="worker_id" property="workerId" jdbcType="BIGINT"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,create_by, create_time, last_modify_by, last_modify_time, deleted, version,
+        name,eng_name,gender,age,primary_school,middle_school,high_school,address,mather_phone,email,father_phone,
+        is_formal,worker_id
+    </sql>
+    <sql id="Search_Where_Clause">
+        <where>
+            deleted = 0
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="workerId != null">
+                AND worker_id = #{workerId}
+            </if>
+            <if test="isFormal != null">
+                AND is_formal = #{isFormal}
+            </if>
+            <if test="engName != null and engName != ''">
+                AND eng_name like concat ('%',#{engName},'%')
+            </if>
+            <if test="age != null">
+                AND age = #{age}
+            </if>
+            <if test="primarySchool != null and primarySchool != ''">
+                AND primary_school like concat ('%',#{primarySchool},'%')
+            </if>
+            <if test="middleSchool != null and middleSchool != ''">
+                AND middle_school like concat ('%',#{middleSchool},'%')
+            </if>
+            <if test="highSchool != null and highSchool != ''">
+                AND high_school like concat ('%',#{highSchool},'%')
+            </if>
+            <if test="address != null">
+                AND address =#{address}
+            </if>
+            <if test="matherPhone != null and matherPhone != ''">
+                AND mather_phone like concat ('%',#{matherPhone},'%')
+            </if>
+            <if test="fatherPhone != null and fatherPhone != ''">
+                AND father_phone like concat ('%',#{fatherPhone},'%')
+            </if>
+            <if test="email != null and email != ''">
+                AND email like concat ('%',#{email},'%')
+            </if>
+        </where>
+    </sql>
+    <select id="selectStudentPageByDomin" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM sup_student
+        <include refid="Search_Where_Clause"/>
+    </select>
+</mapper>

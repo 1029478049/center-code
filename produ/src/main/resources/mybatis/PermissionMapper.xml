@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.PermissionMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.domin.Permission">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="last_modify_by" property="lastModifyBy" jdbcType="VARCHAR"/>
+        <result column="last_modify_time" property="lastModifyTime" jdbcType="TIMESTAMP"/>
+        <result column="deleted" property="deleted" jdbcType="INTEGER"/>
+        <result column="version" property="version" jdbcType="BIGINT"/>
+
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,create_by, create_time, last_modify_by, last_modify_time, deleted, version,name,url
+    </sql>
+    <sql id="Search_Where_Clause">
+        <where>
+            deleted = 0
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                AND name = #{name}
+            </if>
+            <if test="url != null and url != ''">
+                AND url = #{url}
+            </if>
+        </where>
+    </sql>
+    <sql id="Search_NoWhere_Clause">
+            deleted = 0
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                AND name = #{name}
+            </if>
+            <if test="url != null and url != ''">
+                AND url = #{url}
+            </if>
+    </sql>
+    <select id="selectPermissionPageByDomin" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM u_permission
+        <include refid="Search_Where_Clause"/>
+    </select>
+    <select id="selectRolePermissionPageByDomin" resultMap="BaseResultMap" parameterType="com.example.demo.model.PermissionQueryModel">
+        SELECT <include refid="Base_Column_List"/>
+        FROM u_permission u
+        WHERE EXISTS (
+        SELECT pid FROM u_role_permission WHERE u.id = pid
+        AND <include refid="Search_NoWhere_Clause"/>
+        AND rid = #{roleId}
+        )
+    </select>
+    <select id="selectUnboundRolePermissionPageByDomin" resultMap="BaseResultMap" parameterType="com.example.demo.model.PermissionQueryModel">
+        SELECT <include refid="Base_Column_List"/>
+        FROM u_permission u
+        WHERE <include refid="Search_NoWhere_Clause"/> AND
+        not EXISTS (
+        SELECT pid FROM u_role_permission WHERE u.id = pid
+        AND rid = #{roleId}
+        )
+    </select>
+</mapper>

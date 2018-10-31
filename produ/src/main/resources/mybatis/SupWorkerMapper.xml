@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.SupWorkerMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.domin.SupWorker">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="last_modify_by" property="lastModifyBy" jdbcType="VARCHAR"/>
+        <result column="last_modify_time" property="lastModifyTime" jdbcType="TIMESTAMP"/>
+        <result column="deleted" property="deleted" jdbcType="INTEGER"/>
+        <result column="version" property="version" jdbcType="BIGINT"/>
+
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="BIGINT"/>
+        <result column="worker_age" property="workerAge" jdbcType="BIGINT"/>
+        <result column="gender" property="gender" jdbcType="BIGINT"/>
+        <result column="max_education" property="maxEducation" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="emergency_contact_phone" property="emergencyContactPhone" jdbcType="VARCHAR"/>
+        <result column="emergency_contact" property="emergencyContact" jdbcType="VARCHAR"/>
+        <result column="phone" property="phone" jdbcType="VARCHAR"/>
+        <result column="position" property="position" jdbcType="VARCHAR"/>
+        <result column="work_time" property="workTime" jdbcType="TIMESTAMP"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,create_by, create_time, last_modify_by, last_modify_time, deleted, version,
+        name,age,worker_age,gender,max_education,email,emergency_contact_phone,emergency_contact,phone,position,work_time,address
+    </sql>
+    <sql id="Search_Where_Clause">
+        <where>
+            deleted = 0
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="position != null and position != ''">
+                AND position = #{position}
+            </if>
+            <if test="name != null and name != ''">
+                AND name Like concat ('%',#{name},'%')
+            </if>
+        </where>
+    </sql>
+    <select id="selectWorkerPageByDomin" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM sup_worker
+        <include refid="Search_Where_Clause"/>
+    </select>
+</mapper>

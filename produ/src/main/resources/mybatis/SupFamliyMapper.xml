@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.SupFamliyMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.domin.SupFamliy">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="last_modify_by" property="lastModifyBy" jdbcType="VARCHAR"/>
+        <result column="last_modify_time" property="lastModifyTime" jdbcType="TIMESTAMP"/>
+        <result column="deleted" property="deleted" jdbcType="INTEGER"/>
+        <result column="version" property="version" jdbcType="BIGINT"/>
+
+        <result column="stu_id" property="stuId" jdbcType="BIGINT"/>
+        <result column="father_name" property="fatherName" jdbcType="VARCHAR"/>
+        <result column="father_phone" property="fatherPhone" jdbcType="VARCHAR"/>
+        <result column="father_age" property="fatherAge" jdbcType="BIGINT"/>
+        <result column="father_work" property="fatherWork" jdbcType="VARCHAR"/>
+        <result column="father_schooling" property="fatherSchooling" jdbcType="VARCHAR"/>
+        <result column="mather_name" property="matherName" jdbcType="VARCHAR"/>
+        <result column="mather_phone" property="matherPhone" jdbcType="BIGINT"/>
+        <result column="mather_age" property="matherAge" jdbcType="VARCHAR"/>
+        <result column="mather_work" property="matherWork" jdbcType="VARCHAR"/>
+        <result column="mather_schooling" property="matherSchooling" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="emergency_contact_phone" property="emergencyContactPhone" jdbcType="VARCHAR"/>
+        <result column="emergency_contact" property="emergencyContact" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,create_by, create_time, last_modify_by, last_modify_time, deleted, version,
+    </sql>
+    <sql id="Search_Where_Clause">
+        <where>
+            deleted = 0
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+        </where>
+    </sql>
+    <select id="selectFamliyMarkPageByDomin" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM sup_famliy
+        <include refid="Search_Where_Clause"/>
+    </select>
+</mapper>

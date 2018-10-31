@@ -1,0 +1,188 @@
+@charset "UTF-8";
+.page-header .page-header-top .top-menu .navbar-nav > li.dropdown {
+    margin: 0;
+    padding: 0 4px;
+    height: 50px;
+    display: inline-block;
+}
+
+.page-header .page-header-top .top-menu .navbar-nav > li.dropdown > .dropdown-menu {
+    z-index: 9996;
+    margin-top: 5px;
+    margin-right: 7px;
+    font-family: "Open Sans", sans-serif;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.page-header .page-header-top .top-menu .navbar-nav > li.dropdown > .dropdown-menu:before {
+    position: absolute;
+    top: -8px;
+    right: 9px;
+    display: inline-block !important;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #efefef;
+    border-left: 8px solid transparent;
+    content: '';
+}
+
+.page-header .page-header-top .top-menu .navbar-nav > li.dropdown > .dropdown-menu:after {
+    position: absolute;
+    top: -7px;
+    right: 10px;
+    display: inline-block !important;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    content: '';
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav.navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown {
+    position: static;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu {
+    left: auto;
+    width: auto;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content > .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content > .row > div{
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content.mega-menu-responsive-content {
+    padding: 10px 18px 10px 45px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content > .row > div > ul > li:first-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu {
+    padding: 0;
+    margin: 0;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu:last-child {
+    border-right: 0;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li {
+    padding: 1px !important;
+    margin: 0 !important;
+    list-style: none;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > h3 {
+    margin-top: 5px;
+    padding-left: 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a {
+    display: block;
+    white-space: normal;
+    font-family: "Open Sans", sans-serif;
+    padding: 7px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #676a6c;
+    padding-left:0px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a:focus, .page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a:hover {
+    text-decoration: none;
+    color: #1ab394;;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a.iconify {
+    padding: 7px 7px 7px 30px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a.iconify > i {
+    position: absolute;
+    top: auto !important;
+    margin-left: -24px;
+    font-size: 15px;
+    margin-top: 3px !important;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a .badge,
+.page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a .label {
+    margin-left: 5px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.menu-dropdown .dropdown-menu:after, .page-header .page-header-menu .hor-menu .navbar-nav > li.menu-dropdown .dropdown-menu:before {
+    display: none !important;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li > a {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 16px 18px 15px 18px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li > a:focus {
+    background: none !important;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-menu {
+    margin-top: 0;
+    border: none;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-menu li > a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px 12px;
+    white-space: normal;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-menu li > a .label,
+.page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-menu li > a .badge {
+    font-weight: 300;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.classic-menu-dropdown .dropdown-menu {
+    min-width: 195px;
+    max-width: 235px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-submenu > .dropdown-menu {
+    top: 0;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-submenu > a:after {
+    top: 9px;
+    right: 10px;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.menu-dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
+
+

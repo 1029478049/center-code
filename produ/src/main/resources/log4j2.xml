@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="TRACE" monitorInterval="30">
+    <properties>
+        <!-- 文件输出格式 -->
+        <property name="PATTERN">%d{HH:mm:ss.SSS} [%t] [%-5level] %logger{36} - %msg%n</property>
+    </properties>
+
+    <appenders>
+        <Console name="CONSOLE" target="system_out">
+            <PatternLayout pattern="${PATTERN}" />
+        </Console>
+    </appenders>
+
+    <loggers>
+        <logger name="com.example.demo.mapper" level="TRACE" />
+        <root level="info">
+            <appenderref ref="CONSOLE" />
+        </root>
+    </loggers>
+</configuration>
