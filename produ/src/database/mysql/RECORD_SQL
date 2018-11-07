@@ -1,0 +1,10 @@
+-- 查询表结构
+SELECT
+COLUMN_NAME  代码,
+COLUMN_COMMENT 名称,
+COLUMN_TYPE 数据类型,
+'false' as 是键,
+COLUMN_COMMENT 注释
+from INFORMATION_SCHEMA.COLUMNS
+where table_schema= 'nci_portal'
+and table_name = 'dept'
