@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ include file="../../../layouts/default.jsp" %>
-<%@ include file="../../../common/resources/resources-css.jsp" %>
+<%@include file="../../common/taglibs.jspf"%>
+<%@include file="../../common/resources-js.jsp" %>
+<%@include file="../../common/resources-css.jsp" %>
 <style>
     /*.ui-jqgrid .ui-jqgrid-title{font-size:10px;}    !*修改grid标题的字体大小*!
 

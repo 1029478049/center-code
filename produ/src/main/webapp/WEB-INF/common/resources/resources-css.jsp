@@ -1,33 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 
-<link href="../../../css/animate.min.css" rel="stylesheet">
-<link href="../../../css/style.min.css?v=4.1.0" rel="stylesheet">
-<link href="../../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
-<link href="../../../css/plugins/jqgrid/ui.jqgridffe4.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/animate.min.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/style.min.css?v=4.1.0" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/jqgrid/ui.jqgridffe4.css" rel="stylesheet">
 
-<link href="../../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
 
-<link href="../../../js/plugins/layer/skin/layer.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/js/plugins/layer/skin/layer.css" rel="stylesheet">
 
-<link href="../../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/iCheck/custom.css" rel="stylesheet">
 
-<link href="../../../css/plugins/chosen/chosen.css" rel="stylesheet">
-<link href="../../../css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-<link href="../../../css/plugins/cropper/cropper.min.css" rel="stylesheet">
-<link href="../../../css/plugins/switchery/switchery.css" rel="stylesheet">
-<link href="../../../css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
-<link href="../../../css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
-<link href="../../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-<link href="../../../css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
-<link href="../../../css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
-<%--<link href="../../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">--%>
-<link href="../../../css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/cropper/cropper.min.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/switchery/switchery.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+<%--<link href="${ctx}/src/main/webapp/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">--%>
+<link href="${ctx}/src/main/webapp/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
 
 
 <!-- Data Tables -->
-<link href="../../../css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
 
-<link href="../../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="${ctx}/src/main/webapp/css/style.min862f.css?v=4.1.0" rel="stylesheet">
 
 <%--重写样式--%>
 <style type="text/css">

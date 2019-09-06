@@ -36,7 +36,7 @@ public class LoginController {
 
     @RequestMapping("/login")
     public String index() {
-        return "/../../login";
+        return "/login";
     }
     /**
      * ajax登录请求
@@ -66,14 +66,14 @@ public class LoginController {
     @RequestMapping(value = "/logout")
     public String logout() {
         SecurityUtils.getSubject().logout();
-        return "/../../login";
+        return "/login";
     }
 
     @RequestMapping(value = "/paltform")
     public String paltform(ModelMap map) {
         String userName = WebSubjectUtil.getUser().getUserName();
         map.put("userName",userName);
-        return "/../../paltform";
+        return "/paltform";
     }
 
 

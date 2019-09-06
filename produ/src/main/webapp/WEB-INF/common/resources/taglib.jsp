@@ -4,7 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
-<fmt:setTimeZone value="Asia/Shanghai"/><%-- 设置jsp时区 --%>
+<%--<fmt:setTimeZone value="Asia/Shanghai"/>--%><%-- 设置jsp时区 --%>
 <c:set value="${sessionScope['org.apache.shiro.subject.support.DefaultSubjectContext_PRINCIPALS_SESSION_KEY'].primaryPrincipal}" var="LOGIN_USER"  />
-<c:set value="${pageContext.request.contextPath}" var="ctx"/>
+<%--<c:set value="${pageContext.request.contextPath}" var="ctx"/>--%>
 

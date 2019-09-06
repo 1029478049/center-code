@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ include file="../../layouts/default.jsp" %>
-<%@ include file="../../common/resources/resources-css.jsp" %>
-<style>
-</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<%@include file="../common/taglibs.jspf"%>
+<%@include file="../common/resources-js.jsp" %>
+<%@include file="../common/resources-css.jsp" %>
+
 <div class="wrapper-content animated fadeInRight">
     <g:box id="l" title="学生管理" cssStyle="padding:0">
         <g:grid id="stuList" action="${ctx}/stuPath/queryStu">
@@ -208,3 +211,4 @@
         $("#queryMark").click(queryMarkFun);
     })
 </script>
+</html>

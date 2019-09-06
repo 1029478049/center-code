@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ include file="../../../layouts/default.jsp" %>
-<%@ include file="../../../common/resources/resources-css.jsp" %>
+<%@include file="../../common/taglibs.jspf"%>
+<%@include file="../../common/resources-js.jsp" %>
+<%@include file="../../common/resources-css.jsp" %>
 <style>
 </style>
 <div class="wrapper-content animated fadeInRight">

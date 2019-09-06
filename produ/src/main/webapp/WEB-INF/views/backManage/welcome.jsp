@@ -8,11 +8,9 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 <head>
-    <%@ include file="../../layouts/default.jsp" %>
-    <link rel="shortcut icon" href="../../../favicon.ico"> <link href="../../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
-    <link href="../../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
-    <link href="../../../css/animate.min.css" rel="stylesheet">
-    <link href="../../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <%@include file="../common/taglibs.jspf"%>
+    <%@include file="../common/resources-js.jsp" %>
+    <%@include file="../common/resources-css.jsp" %>
 </head>
 <body>
 <div id="wrapper">
