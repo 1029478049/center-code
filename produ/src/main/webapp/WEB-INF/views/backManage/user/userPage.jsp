@@ -38,7 +38,7 @@
             label: "用户名称",
             name: "userName",
             index: "userName",
-            width: '185px',
+            width: '240px',
             sortable: false,
             editable: true,
             align: 'center'
@@ -56,7 +56,7 @@
             label: "创建人",
             name: "createBy",
             index: "createBy",
-            width: '155px',
+            width: '300px',
             sortable: false,
             editable: true,
             align: 'center'
@@ -74,7 +74,7 @@
             label: "是否有效登陆",
             name: "status",
             index: "status",
-            width: '155px',
+            width: '180px',
             sortable: false,
             editable: true,
             align: 'center',
@@ -84,7 +84,7 @@
             label:"创建时间",
             name:"createTime",
             index:"createTime",
-            width: '222px',
+            width: '300px',
             sortable: false,
             editable: true,
             align: 'center'

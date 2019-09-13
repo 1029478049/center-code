@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@include file="common/taglibs.jspf"%>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,7 +64,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="/stuPath/toList" data-index="0">学生管理</a>
+                            <a class="J_menuItem" href="${ctx}/stuPath/toList" data-index="0">学生管理</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="index_v2.html">家长管理</a>
@@ -72,10 +73,10 @@
                             <a class="J_menuItem" href="index_v3.html">教师管理</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="/workPath/toList">工作人员管理</a>
+                            <a class="J_menuItem" href="${ctx}/workPath/toList">工作人员管理</a>
                         </li>
                         <li>
-                            <a href="/backManage/index" target="_self">后台管理</a>
+                            <a href="${ctx}/backManage/index" target="_self">后台管理</a>
                         </li>
                     </ul>
 
@@ -496,7 +497,7 @@
             <a href="/logout" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v148b2.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="${ctx}/paltform/list" frameborder="0" data-id="index_v1.html" seamless></iframe>
         </div>
         <div class="footer">
             <div class="pull-right">&copy; 2015-至今 <a href="http://www.huanshijiaoyu.com" target="_blank">环时教育</a>
