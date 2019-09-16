@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.DTO.result.PlatformLogResultDTO;
 import com.example.demo.domin.LogItems;
 import com.example.demo.domin.PlatformLog;
 import org.springframework.stereotype.Controller;
@@ -25,12 +26,12 @@ public class IndexController {
 
     @RequestMapping("/list")
     public String list(ModelMap modelMap) {
-        List<PlatformLog> logs = new ArrayList<>();
+        List<PlatformLogResultDTO> logs = new ArrayList<>();
         for(int i=1;i<=7;i++){
-            PlatformLog platformLog = new PlatformLog();
-            platformLog.setId(i);
+            PlatformLogResultDTO platformLog = new PlatformLogResultDTO();
+            platformLog.setId((long) i);
             platformLog.setUpdateTime("2019-10-0"+i);
-            platformLog.setVersion("V0.0."+i);
+            platformLog.setUpdateVersion("V0.0."+i);
             platformLog.setRecommend("今天更新了内容什么什么什么");
             platformLog.setOpenItem(i == 1? "in" : "");
             List<LogItems> items = new ArrayList<>();

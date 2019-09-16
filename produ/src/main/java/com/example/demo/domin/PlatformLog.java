@@ -1,22 +1,22 @@
 package com.example.demo.domin;
 
+import com.example.demo.common.parent.Domin.PageModel;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+import javax.persistence.Table;
 import java.util.Date;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class PlatformLog {
+@Table(name = "platform_Log")
+public class PlatformLog extends PageModel {
 
-    private int id;
     /**
      * 更新版本
      */
-    private String version;
-    /**
-     * 更新时间
-     */
-    private String updateTime;
+    private String updateVersion;
     /**
      * 大体介绍
      */

@@ -567,7 +567,7 @@ var Searcher = {
             url: searchUrl,
             mtype: 'POST',
             datatype: "json",
-            height: '265px',
+            height: '300px',
             autowidth: true,
             shrinkToFit: true,
             autoScroll: true,

@@ -114,7 +114,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#version" href="#${log.id}">${log.version}</a><code
+                                            <a data-toggle="collapse" data-parent="#version" href="#${log.id}">${log.updateVersion}</a><code
                                                 class="pull-right">${log.updateTime}</code>
                                         </h5>
                                     </div>
@@ -514,10 +514,10 @@
         <div class="col-sm-4">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>详细说明</h5>
+                    <h5>学习任务</h5>
                 </div>
                 <div class="ibox-content">
-                    <p>购买后你可以获得什么？</p>
+                    <p>你可以获得什么？</p>
                     <ol>
                         <li>所有源码(未压缩、带注释版本)；</li>
                         <li>必要的技术支持；</li>
@@ -525,14 +525,14 @@
                         <li>……</li>
                     </ol>
                     <hr>
-                    <p>联系下边联系方式</p>
+                    <p>参与人微信</p>
                     <div class="alert alert-warning">
                         韩先生：17190189091
                     </div>
-                    <p id="pay-qrcode">
+                    <%--<p id="pay-qrcode">
                         <a href=""><img src="../../../images/pay.png" width="100%" alt="请使用手机支付宝或者微信扫码支付">
                         </a>
-                    </p>
+                    </p>--%>
 
                 </div>
             </div>

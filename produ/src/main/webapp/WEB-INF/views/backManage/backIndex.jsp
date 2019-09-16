@@ -34,11 +34,11 @@
                             <ul  class="dropdown-menu">
                                     <li><a class="J_menuItem" href="${ctx}/backManage/userPage" data-index="1">用户管理</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="../../../table_data_tables.html">Demo列表</a>
-                                    </li>
                                     <li><a class="J_menuItem" href="${ctx}/rolePath/list">角色管理</a>
                                     </li>
                                     <li><a class="J_menuItem" href="${ctx}/permissionPath/list">资源管理</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="${ctx}/codeLogs/list">代码修改说明</a>
                                     </li>
                             </ul>
                         </li>
