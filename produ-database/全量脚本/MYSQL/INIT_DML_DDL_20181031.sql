@@ -276,6 +276,22 @@ CREATE TABLE `u_user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
+CREATE TABLE `platform_Log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `update_version` varchar(20) DEFAULT NULL COMMENT '更新版本',
+  `recommend` varchar(255) DEFAULT NULL COMMENT '大体内容',
+  `create_time` datetime(2) DEFAULT NULL COMMENT '创建时间',
+  `last_login_time` datetime(2) DEFAULT NULL COMMENT '最后登录时间',
+  `status` bigint(1) DEFAULT '1' COMMENT '1:有效，0:禁止登录',
+  `deleted` bigint(1) DEFAULT '0' COMMENT '删除状态；0：未删除，1：已删除',
+  `update_time` datetime(2) DEFAULT NULL COMMENT '修改时间',
+  `version` bigint(6) DEFAULT '0' COMMENT '版本',
+  `last_modify_time` date DEFAULT NULL COMMENT '上一次修改时间',
+  `last_modify_by` varchar(20) DEFAULT NULL COMMENT '上一次修改人',
+  `create_by` varchar(20) DEFAULT NULL COMMENT '创建人',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
 -- ----------------------------
 -- Records of u_user
 -- ----------------------------
