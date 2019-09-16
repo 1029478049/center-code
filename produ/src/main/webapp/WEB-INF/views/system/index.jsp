@@ -511,7 +511,7 @@
                     <p>你将要学习什么</p>
                     <ol>
                         <li>微服务块SpringCloud</li>
-                        <li>mysql主从复制+哨兵模式</li>
+                        <li>redis主从复制+哨兵模式</li>
                         <li>Docker+K8S</li>
                         <li>mycat</li>
                         <li>多节点多线程</li>
