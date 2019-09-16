@@ -66,39 +66,30 @@
 <div class="wrapper wrapper-content">
     <div class="row">
         <div class="col-sm-4">
-
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>欢迎欢迎</h5>
+                    <h5>目前架构</h5>
                 </div>
                 <div class="ibox-content">
-
-                    <p class="text-warning" style="font-size:14px">我们提供基于H+的服务，具体请联系作者。</p>
-                    <p>同时，我们也提供以下服务：</p>
-                    <ol>
-                        <li>内容一</li>
-                        <li>内容一</li>
-                        <li>内容一</li>
-                        <li>内容一</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>联系信息</h5>
-
-                </div>
-                <div class="ibox-content">
-                    <p><i class="fa fa-send-o"></i> 电话：<a>17190189091</a>
-                    </p>
-                    <p><i class="fa fa-qq"></i> QQ：<a
-                            href="http://wpa.qq.com/msgrd?v=3&amp;uin=1029478049&amp;site=qq&amp;menu=yes"
-                            target="_blank">1029478049</a>
-                    </p>
-                    <p><i class="fa fa-weixin"></i> 微信：<a href="javascript:;">han1029478049</a>
-                    </p>
-                    <p><i class="fa fa-credit-card"></i> 支付宝：<a href="javascript:;" class="支付宝信息">17190189091</a>
-                    </p>
+                    <p>前端</p>
+                    <div class="alert alert-warning">
+                        <p>跳转JSP</p>
+                        <ol>
+                            <li>H+框架,bootstrap,js,html5,CSS</li>
+                            <li>……</li>
+                        </ol>
+                    </div>
+                    <hr>
+                    <p>后端</p>
+                    <div class="alert alert-warning">
+                        <p>目前单服务模块</p>
+                        <ol>
+                            <li>SpringBoot,SpringMvc,mabatis</li>
+                            <li>数据库:mysql</li>
+                            <li>nosql:mysql</li>
+                            <li>……</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
@@ -517,23 +508,44 @@
                     <h5>学习任务</h5>
                 </div>
                 <div class="ibox-content">
-                    <p>你可以获得什么？</p>
+                    <p>你将要学习什么</p>
                     <ol>
-                        <li>所有源码(未压缩、带注释版本)；</li>
-                        <li>必要的技术支持；</li>
-                        <li>付费二次开发服务；</li>
-                        <li>……</li>
+                        <li>微服务块SpringCloud</li>
+                        <li>mysql主从复制+哨兵模式</li>
+                        <li>Docker+K8S</li>
+                        <li>mycat</li>
+                        <li>多节点多线程</li>
                     </ol>
                     <hr>
                     <p>参与人微信</p>
                     <div class="alert alert-warning">
-                        韩先生：17190189091
+                        韩先生：17190189091<br>
+                        骆先生：自补<br>
+                        马先生：自补<br>
                     </div>
                     <%--<p id="pay-qrcode">
                         <a href=""><img src="../../../images/pay.png" width="100%" alt="请使用手机支付宝或者微信扫码支付">
                         </a>
                     </p>--%>
 
+                </div>
+            </div>
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>联系信息</h5>
+
+                </div>
+                <div class="ibox-content">
+                    <p><i class="fa fa-send-o"></i> 电话：<a>17190189091</a>
+                    </p>
+                    <p><i class="fa fa-qq"></i> QQ：<a
+                            href="http://wpa.qq.com/msgrd?v=3&amp;uin=1029478049&amp;site=qq&amp;menu=yes"
+                            target="_blank">1029478049</a>
+                    </p>
+                    <p><i class="fa fa-weixin"></i> 微信：<a href="javascript:;">han1029478049</a>
+                    </p>
+                    <p><i class="fa fa-credit-card"></i> 支付宝：<a href="javascript:;" class="支付宝信息">17190189091</a>
+                    </p>
                 </div>
             </div>
         </div>
