@@ -1,6 +1,5 @@
 package com.example.demo.controller.redisTest;
-import com.example.demo.config.RedisService;
-import com.example.demo.domin.City;
+import com.example.demo.config.redis.RedisClientTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,23 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CityController {
     @Autowired
-    private RedisService redisService;
+    private RedisClientTemplate redisClientTemplate;
 
-    //http://localhost:8081/saveCity?cityName=北京&cityIntroduce=中国首都&cityId=1
-    @GetMapping(value = "saveCity")
-    public String saveCity(int cityId,String cityName,String cityIntroduce){
-        City city = new City(cityId,cityName,cityIntroduce);
-        redisService.set(cityId+"",city);
-        return "success";
-    }
-
-
-
-    //http://localhost:8888/getCityById?cityId=1
-    @GetMapping(value = "getCityById")
-    public City getCity(int cityId){
-        City city = (City) redisService.get(cityId+"");
-        return city;
+    /**
+     * 测试集群
+     * @return Object
+     */
+    @GetMapping(value = "/redisClusterTest")
+    public Object testSet(){
+        redisClientTemplate.setToRedis("Hanyh","Hanyh测试redis集群");
+        System.out.println(redisClientTemplate.getRedis("Frank"));
+        return null;
     }
 
 }

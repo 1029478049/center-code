@@ -27,23 +27,32 @@ public class IndexController {
     @RequestMapping("/list")
     public String list(ModelMap modelMap) {
         List<PlatformLogResultDTO> logs = new ArrayList<>();
-        for(int i=1;i<=7;i++){
+
             PlatformLogResultDTO platformLog = new PlatformLogResultDTO();
-            platformLog.setId((long) i);
-            platformLog.setUpdateTime("2019-10-0"+i);
-            platformLog.setUpdateVersion("V0.0."+i);
-            platformLog.setRecommend("大体总结：今天更新了内容什么什么什么");
-            platformLog.setOpenItem(i == 1? "in" : "");
+            platformLog.setId(1L);
+            platformLog.setUpdateTime("2019-9-17");
+            platformLog.setUpdateVersion("V0.0.1");
+            platformLog.setRecommend("大体总结：redis集群");
+            platformLog.setOpenItem("in");
             List<LogItems> items = new ArrayList<>();
-            for(int j = 1;j<=5;j++){
-                LogItems item = new LogItems();
-                item.setId(j);
-                item.setText("具体更新条目"+j);
-                items.add(item);
-            }
+                LogItems item1 = new LogItems();
+                item1.setId(1);
+                item1.setText("redis安装和单机多节点集群网址:"+"https://www.cnblogs.com/tomasman/p/8288569.html");
+                LogItems item2 = new LogItems();
+                item2.setId(2);
+                item2.setText("Mac OS X 安装Ruby:"+"https://www.cnblogs.com/huanghaipo/p/7478625.html");
+                LogItems item3 = new LogItems();
+                item3.setId(3);
+                item3.setText("springBoot整合redisCluster(redis集群)模式，包路径:"+"com.example.demo.config.redis");
+                LogItems item4 = new LogItems();
+                item4.setId(4);
+                item4.setText("集群redis测试类:"+"com.example.demo.controller.redisTest.CityController");
+                items.add(item1);
+                items.add(item2);
+                items.add(item3);
             platformLog.setItems(items);
             logs.add(platformLog);
-        }
+
         modelMap.put("logs",logs);
         return "/system/index";
     }
