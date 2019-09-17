@@ -32,13 +32,13 @@ public class IndexController {
             platformLog.setId((long) i);
             platformLog.setUpdateTime("2019-10-0"+i);
             platformLog.setUpdateVersion("V0.0."+i);
-            platformLog.setRecommend("今天更新了内容什么什么什么");
+            platformLog.setRecommend("大体总结：今天更新了内容什么什么什么");
             platformLog.setOpenItem(i == 1? "in" : "");
             List<LogItems> items = new ArrayList<>();
             for(int j = 1;j<=5;j++){
                 LogItems item = new LogItems();
                 item.setId(j);
-                item.setText("更新条目"+j);
+                item.setText("具体更新条目"+j);
                 items.add(item);
             }
             platformLog.setItems(items);

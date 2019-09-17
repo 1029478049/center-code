@@ -86,16 +86,17 @@
                             <li>SpringBoot,SpringMvc,mybatis</li>
                             <li>后台层级介绍:</li>
                             <ul>
-                                <li>controller层:控制转发，入参控制</li>
+                                <li>controller层:控制转发,入参控制</li>
                                 <li>facade层:业务逻辑代码控制</li>
                                 <li>service层:事物统一管理层</li>
                                 <li>dao层:操作数据库</li>
                                 <li>入参对象DTO封装,格式入参XXXQueryDTO(个数和页面的查询项一致),返回对象XXXResultDTO,继承PageDTO(分页参数)</li>
                                 <li>实体类继承PageModel(分页参数),再继承BaseDomin(表里的基本字段，比如:id,时间,创建人等)</li>
                                 <li>分页用PageHelper,在service层切面给分页参数赋值</li>
+                                <li>shiro权限管理,用户登陆</li>
                             </ul>
-                            <li>数据库:mysql</li>
-                            <li>nosql:redis</li>
+                            <li>数据库: mysql</li>
+                            <li>nosql: redis</li>
                         </ol>
                     </div>
                 </div>
