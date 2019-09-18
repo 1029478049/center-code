@@ -566,6 +566,7 @@
                         骆：自补<br>
                         小马哥：自补<br>
                         关关：自补<br>
+                        浩仔：自补<br>
                     </div>
                     <%--<p id="pay-qrcode">
                         <a href=""><img src="../../../images/pay.png" width="100%" alt="请使用手机支付宝或者微信扫码支付">
