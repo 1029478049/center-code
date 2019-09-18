@@ -7,38 +7,35 @@ import com.example.demo.facade.CustomerFacade;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Map;
 
 /**
- * @author Hanyh
- * @create 2017-11-20 11:18
- * @desc
- **/
-@Controller
+ * 登陆控制器
+ */
+@RestController
 public class LoginController {
 
     @Autowired
     private CustomerFacade customerFacade;
 
     @RequestMapping("/login")
-    public String index() {
-        return "/login";
+    public ModelAndView index() {
+        return new ModelAndView("/login");
     }
     /**
      * ajax登录请求
-     * @param username
-     * @param password
-     * @return
+     * @param username 用户名
+     * @param password 密码
+     * @return ExecuteResult<Map<String,Object>>
      */
     @RequestMapping(value="ajaxLogin",method= RequestMethod.POST)
-    @ResponseBody
     public ExecuteResult<Map<String,Object>> submitLogin(String username,String password) {
         ExecuteResult<Map<String,Object>> resultMap = new ExecuteResult<>();
         try {
@@ -57,27 +54,30 @@ public class LoginController {
      * @return login
      */
     @RequestMapping(value = "/logout")
-    public String logout() {
+    public ModelAndView logout() {
         SecurityUtils.getSubject().logout();
-        return "/login";
+        return new ModelAndView("/login");
     }
 
+    /**
+     * 首页
+     * @param map map
+     * @return /paltform
+     */
     @RequestMapping(value = "/paltform")
-    public String paltform(ModelMap map) {
+    public ModelAndView paltform(ModelMap map) {
         String userName = WebSubjectUtil.getUser().getUserName();
         map.put("userName",userName);
-        return "/paltform";
+        return new ModelAndView("/paltform");
     }
 
 
 
     @RequestMapping("/queryAll")
-    @ResponseBody
     public ExecuteResult<List<CustomerDTO>> queryAll(CustomerDTO customerDTO){
         return customerFacade.queryAllByDTO(customerDTO);
     }
     @RequestMapping("/query")
-    @ResponseBody
     public List<CustomerDTO> query(CustomerDTO customerDTO){
         return customerFacade.queryByDTO(customerDTO);
     }

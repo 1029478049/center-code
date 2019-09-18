@@ -3,7 +3,7 @@ package com.example.demo;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.tomcat.jdbc.pool.DataSource;
+//import org.apache.tomcat.jdbc.pool.DataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -20,14 +20,14 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 public class DemoApplication {
 	private static final Logger logger = LogManager.getLogger(DemoApplication.class);
 	//DataSource配置
-	@Bean
+	/*@Bean
 	@ConfigurationProperties(prefix="spring.datasource")
 	public DataSource dataSource() {
 		return new DataSource();
-	}
+	}*/
 
 	//提供SqlSeesion
-	@Bean
+	/*@Bean
 	public SqlSessionFactory sqlSessionFactoryBean() throws Exception {
 
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -38,7 +38,7 @@ public class DemoApplication {
 		sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mybatis*//**//*.xml"));
 
 		return sqlSessionFactoryBean.getObject();
-	}
+	}*/
 
 	// 编码过滤器
 	@Bean
@@ -49,10 +49,10 @@ public class DemoApplication {
 		filter.setForceEncoding(true);
 		return filter;
 	}
-	@Bean
+	/*@Bean
 	public PlatformTransactionManager transactionManager() {
 		return new DataSourceTransactionManager(dataSource());
-	}
+	}*/
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		logger.info("==============================");
