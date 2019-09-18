@@ -110,7 +110,7 @@
                 <div class="ibox-content no-padding">
                     <div class="panel-body">
                         <div class="panel-group" id="version">
-                            <c:forEach items="${logs}" var="log">
+                            <%--<c:forEach items="${logs}" var="log">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
@@ -129,8 +129,42 @@
                                         </div>
                                     </div>
                                 </div>
-                            </c:forEach>
-
+                            </c:forEach>--%>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#version" href="#v1">hanyh-V0.0.1</a><code
+                                                class="pull-right">2019-9-17</code>
+                                        </h5>
+                                    </div>
+                                    <div id="v1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="alert alert-warning">大体总结：redis集群</div>
+                                            <ol>
+                                                <li>redis安装和单机多节点集群网址:https://www.cnblogs.com/tomasman/p/8288569.html</li>
+                                                <li>Mac OS X 安装Ruby:https://www.cnblogs.com/huanghaipo/p/7478625.html</li>
+                                                <li>springBoot整合redisCluster(redis集群)模式，包路径:com.example.demo.config.redis</li>
+                                                <li>集群redis测试类位置:com.example.demo.controller.redisTest.CityController</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#version" href="#v2">xxx-Vx.x.x</a><code
+                                                class="pull-right">xxxx.xx.xx</code>
+                                        </h5>
+                                    </div>
+                                    <div id="v2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="alert alert-warning">大体总结：xxxx</div>
+                                            <ol>
+                                                <li>xxxxxxxxxxxx</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
                             <%--<div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h5 class="panel-title">
@@ -528,9 +562,10 @@
                     <hr>
                     <p>参与人微信</p>
                     <div class="alert alert-warning">
-                        韩先生：17190189091<br>
-                        骆先生：自补<br>
-                        马先生：自补<br>
+                        韩：17190189091<br>
+                        骆：自补<br>
+                        小马哥：自补<br>
+                        关关：自补<br>
                     </div>
                     <%--<p id="pay-qrcode">
                         <a href=""><img src="../../../images/pay.png" width="100%" alt="请使用手机支付宝或者微信扫码支付">

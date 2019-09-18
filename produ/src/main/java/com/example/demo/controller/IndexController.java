@@ -27,7 +27,7 @@ public class IndexController {
     @RequestMapping("/list")
     public String list(ModelMap modelMap) {
         List<PlatformLogResultDTO> logs = new ArrayList<>();
-
+            //有服务器查库
             PlatformLogResultDTO platformLog = new PlatformLogResultDTO();
             platformLog.setId(1L);
             platformLog.setUpdateTime("2019-9-17");
