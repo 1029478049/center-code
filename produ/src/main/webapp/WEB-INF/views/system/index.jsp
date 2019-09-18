@@ -554,7 +554,7 @@
                     <p>你将要学习什么</p>
                     <ol>
                         <li>微服务块SpringCloud</li>
-                        <li>redis主从复制+哨兵模式</li>
+                        <li>redis主从复制+哨兵模式+集群</li>
                         <li>Docker+K8S</li>
                         <li>mycat</li>
                         <li>多节点多线程</li>
@@ -574,7 +574,7 @@
 
                 </div>
             </div>
-            <div class="ibox float-e-margins">
+            <%--<div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>联系信息</h5>
 
@@ -591,7 +591,7 @@
                     <p><i class="fa fa-credit-card"></i> 支付宝：<a href="javascript:;" class="支付宝信息">17190189091</a>
                     </p>
                 </div>
-            </div>
+            </div>--%>
         </div>
     </div>
 </div>
