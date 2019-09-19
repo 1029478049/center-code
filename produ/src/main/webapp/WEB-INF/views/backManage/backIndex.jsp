@@ -43,39 +43,39 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
+                            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 功能菜单 <span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="${ctx}/backManage/qrCode/list">二维码管理</a>
                                 </li>
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
-                                <li><a href="#">M菜单列表</a>
+                                <li><a class="J_menuItem" href="#">M菜单列表</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> 菜单 <span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
-                                <li><a href="#">菜单列表</a>
+                                <li><a class="J_menuItem" href="#">菜单列表</a>
                                 </li>
                                 <li><a href="#">菜单列表</a>
                                 </li>

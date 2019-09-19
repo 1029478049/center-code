@@ -152,11 +152,27 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#version" href="#v2">xxx-Vx.x.x</a><code
-                                                class="pull-right">xxxx.xx.xx</code>
+                                            <a data-toggle="collapse" data-parent="#version" href="#v2">hanyh-V0.0.1</a><code
+                                                class="pull-right">2019-9-19</code>
                                         </h5>
                                     </div>
                                     <div id="v2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="alert alert-warning">大体总结：后台管理-功能菜单增加</div>
+                                            <ol>
+                                                <li>生成二维码并下载;位置在功能菜单下</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#version" href="#v3">xxx-Vx.x.x</a><code
+                                                class="pull-right">xxxx.xx.xx</code>
+                                        </h5>
+                                    </div>
+                                    <div id="v3" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <div class="alert alert-warning">大体总结：xxxx</div>
                                             <ol>
