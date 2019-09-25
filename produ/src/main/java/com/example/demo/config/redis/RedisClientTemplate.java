@@ -32,4 +32,14 @@ public class RedisClientTemplate {
         }
         return str;
     }
+
+    public boolean isKey(String key){
+        boolean str = false;
+        try {
+            str=jedisClusterConfig.getJedisCluster().exists(key);
+        }catch (Exception ex){
+            log.error("setToRedis:{Key:"+key+",isKey"+str+"}",ex);
+        }
+        return str;
+    }
 }

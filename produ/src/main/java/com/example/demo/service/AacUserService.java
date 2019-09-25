@@ -27,4 +27,6 @@ public interface AacUserService extends BaseService<User>{
      * @return
      */
     Page<User> queryUserPage(User user);
+
+    List<User> queryUserCacheList(String userName);
 }

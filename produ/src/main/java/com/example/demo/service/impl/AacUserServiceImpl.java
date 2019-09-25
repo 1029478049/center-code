@@ -35,4 +35,11 @@ public class AacUserServiceImpl extends BaseServiceImpl<User> implements AacUser
         PageHelper.startPage(user.getPage(),user.getPageSize());
         return userMapper.selectUserPageByDomin(user);
     }
+
+    @Override
+    public List<User> queryUserCacheList(String userName) {
+        User user = new User();
+        user.setUserName(userName);
+        return userMapper.selectUserByDomin(user);
+    }
 }

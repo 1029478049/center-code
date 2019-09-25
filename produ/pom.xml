@@ -240,9 +240,21 @@
 			<version>3.3.0</version>
 		</dependency>
 		<!--生成二维码所需依赖的依赖-end -->
+		<!--mongdb-start-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<!--mongdb-end-->
 	</dependencies>
 
 	<build>
+		<finalName>center-code</finalName>
+		<!--<resources>
+			<resource>
+				<directory>src/main/*</directory>
+			</resource>
+		</resources>-->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

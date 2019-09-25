@@ -144,7 +144,7 @@
                                                 <li>redis安装和单机多节点集群网址:https://www.cnblogs.com/tomasman/p/8288569.html</li>
                                                 <li>Mac OS X 安装Ruby:https://www.cnblogs.com/huanghaipo/p/7478625.html</li>
                                                 <li>springBoot整合redisCluster(redis集群)模式，包路径:com.example.demo.config.redis</li>
-                                                <li>集群redis测试类位置:com.example.demo.controller.redisTest.CityController</li>
+                                                <li>集群redis测试类位置:com.example.demo.controller.redisTest.UserRedisController</li>
                                             </ol>
                                         </div>
                                     </div>
@@ -161,6 +161,7 @@
                                             <div class="alert alert-warning">大体总结：后台管理-功能菜单增加</div>
                                             <ol>
                                                 <li>生成二维码并下载;位置在功能菜单下</li>
+                                                <li>集成mongdb</li>
                                             </ol>
                                         </div>
                                     </div>
